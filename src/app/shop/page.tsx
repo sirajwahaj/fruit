@@ -3,7 +3,7 @@ import { useState, useEffect, useCallback } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import { ProductCard } from "@/components/product/ProductCard";
 import { LoadingSpinner } from "@/components/ui/LoadingSpinner";
-import { Filter, SlidersHorizontal, X, ChevronDown } from "lucide-react";
+import { SlidersHorizontal, X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface Product {
@@ -41,7 +41,7 @@ export default function ShopPage() {
         const params = new URLSearchParams(sp.toString());
         if (value) params.set(key, value);
         else params.delete(key);
-        params.delete("page");
+        if (key !== "page") params.delete("page");
         router.push(`/shop?${params.toString()}`);
     };
 

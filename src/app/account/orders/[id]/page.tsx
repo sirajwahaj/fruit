@@ -78,9 +78,8 @@ export default function OrderDetailPage({ params }: { params: Promise<{ id: stri
                     <div className="flex items-center justify-between">
                         {steps.map((step, i) => (
                             <div key={step} className="flex flex-col items-center flex-1">
-                                <div className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold ${
-                                    i + 1 <= sc.step ? "bg-black text-white" : "bg-gray-100 text-gray-400"
-                                }`}>
+                                <div className={`w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold ${i + 1 <= sc.step ? "bg-black text-white" : "bg-gray-100 text-gray-400"
+                                    }`}>
                                     {i + 1 <= sc.step ? "✓" : i + 1}
                                 </div>
                                 <p className={`text-xs mt-2 ${i + 1 <= sc.step ? "font-semibold text-black" : "text-gray-400"}`}>{step}</p>

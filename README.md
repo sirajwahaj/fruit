@@ -48,8 +48,8 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ### Demo Credentials
 
-- **Admin**: admin@luxemarket.com / admin123456
-- **Customer**: customer@example.com / customer123
+- **Admin**: <admin@luxemarket.com> / admin123456
+- **Customer**: <customer@example.com> / customer123
 
 ## Project Structure
 
@@ -80,6 +80,7 @@ src/
 ## Features
 
 ### Customer Features
+
 - Product browsing with filters, search, sorting, pagination
 - Product detail with image gallery and reviews
 - Persistent cart & wishlist (localStorage)
@@ -89,6 +90,7 @@ src/
 - Responsive design (mobile-first)
 
 ### Admin Features
+
 - Dashboard with revenue stats, order overview, low stock alerts
 - Product management (CRUD, stock tracking)
 - Order management with status updates
@@ -96,6 +98,7 @@ src/
 - Category management
 
 ### Technical Features
+
 - Route protection via Next.js middleware
 - Input validation with Zod on all API endpoints
 - Proper error handling & error boundaries

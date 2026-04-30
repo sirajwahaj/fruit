@@ -3,7 +3,7 @@ import { useCartStore } from "@/lib/store";
 import { formatPrice } from "@/lib/format";
 import Image from "next/image";
 import Link from "next/link";
-import { Trash2, Plus, Minus, ShoppingBag, ArrowRight } from "lucide-react";
+import { Trash2, ShoppingBag, ArrowRight } from "lucide-react";
 
 export default function CheckoutPage() {
     const { items, removeItem, updateQuantity, total, clearCart } = useCartStore();
@@ -38,13 +38,13 @@ export default function CheckoutPage() {
                                 <Image src={item.image} alt={item.name} fill className="object-cover" sizes="96px" />
                             </div>
                             <div className="flex-1 min-w-0">
-                                <Link href={`/product/${item.id}`} className="font-semibold text-gray-900 hover:underline line-clamp-2">{item.name}</Link>
+                                <span className="font-semibold text-gray-900 line-clamp-2">{item.name}</span>
                                 <p className="text-gray-500 text-sm mt-1">{formatPrice(item.price)} each</p>
                                 <div className="flex items-center gap-3 mt-3">
                                     <div className="flex items-center border rounded-lg overflow-hidden">
-                                        <button onClick={() => updateQuantity(item.id, item.quantity - 1)} className="px-3 py-1.5 hover:bg-gray-50 text-sm">−</button>
+                                        <button onClick={() => updateQuantity(item.id, item.quantity - 1)} aria-label="Decrease quantity" className="px-3 py-1.5 hover:bg-gray-50 text-sm">−</button>
                                         <span className="px-4 py-1.5 text-sm font-medium border-x">{item.quantity}</span>
-                                        <button onClick={() => updateQuantity(item.id, item.quantity + 1)} disabled={item.quantity >= item.stock} className="px-3 py-1.5 hover:bg-gray-50 text-sm disabled:opacity-40">+</button>
+                                        <button onClick={() => updateQuantity(item.id, item.quantity + 1)} disabled={item.quantity >= item.stock} aria-label="Increase quantity" className="px-3 py-1.5 hover:bg-gray-50 text-sm disabled:opacity-40">+</button>
                                     </div>
                                     <button onClick={() => removeItem(item.id)} className="text-gray-400 hover:text-red-500 transition-colors">
                                         <Trash2 className="w-4 h-4" />

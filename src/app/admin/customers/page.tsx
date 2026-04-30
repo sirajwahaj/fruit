@@ -37,9 +37,8 @@ export default async function AdminCustomersPage() {
                                     <p className="text-xs text-gray-400">{user.email}</p>
                                 </td>
                                 <td className="px-6 py-4">
-                                    <span className={`text-xs font-bold px-2.5 py-1 rounded-full ${
-                                        user.role === "ADMIN" ? "bg-purple-100 text-purple-700" : "bg-gray-100 text-gray-600"
-                                    }`}>
+                                    <span className={`text-xs font-bold px-2.5 py-1 rounded-full ${user.role === "ADMIN" ? "bg-purple-100 text-purple-700" : "bg-gray-100 text-gray-600"
+                                        }`}>
                                         {user.role}
                                     </span>
                                 </td>

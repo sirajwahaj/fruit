@@ -81,7 +81,7 @@ export function ProductDetailClient({ product, related }: { product: Product; re
                                         selectedImg === i ? "border-black" : "border-transparent hover:border-gray-300"
                                     )}
                                 >
-                                    <Image src={img} alt="" fill className="object-cover" sizes="80px" />
+                                    <Image src={img} alt={`${product.name} thumbnail ${i + 1}`} fill className="object-cover" sizes="80px" />
                                 </button>
                             ))}
                         </div>

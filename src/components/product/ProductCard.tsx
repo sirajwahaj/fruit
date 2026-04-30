@@ -97,6 +97,7 @@ export function ProductCard({
                     <div className="absolute top-3 right-3 flex flex-col gap-2">
                         <button
                             onClick={(e) => { e.preventDefault(); toggle(id); }}
+                            aria-label={has(id) ? "Remove from wishlist" : "Add to wishlist"}
                             className={cn(
                                 "w-9 h-9 rounded-full bg-white shadow-md flex items-center justify-center transition-all",
                                 has(id) ? "text-red-500" : "text-gray-400 hover:text-red-400"

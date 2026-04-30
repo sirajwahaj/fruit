@@ -11,17 +11,14 @@ const links = {
     ],
     Help: [
         { href: "/faq", label: "FAQ" },
-        { href: "/shipping", label: "Shipping Info" },
-        { href: "/returns", label: "Returns & Refunds" },
         { href: "/contact", label: "Contact Us" },
-        { href: "/track-order", label: "Track Order" },
+        { href: "/privacy", label: "Privacy Policy" },
+        { href: "/terms", label: "Terms of Service" },
     ],
     Company: [
         { href: "/about", label: "About Us" },
-        { href: "/blog", label: "Blog" },
-        { href: "/careers", label: "Careers" },
-        { href: "/press", label: "Press" },
-        { href: "/affiliate", label: "Affiliate Program" },
+        { href: "/shop?featured=true", label: "New Arrivals" },
+        { href: "/contact", label: "Get in Touch" },
     ],
 };
 
